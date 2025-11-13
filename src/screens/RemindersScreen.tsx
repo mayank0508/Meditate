@@ -6,7 +6,8 @@ import {
   loadReminderSetting,
   scheduleDailyReminder,
   requestPermission,
-  ReminderSetting
+  ReminderSetting,
+  scheduleDebugInSeconds
 } from '../utils/notifications';
 
 export default function RemindersScreen() {
@@ -63,6 +64,19 @@ export default function RemindersScreen() {
     }
   }
   // ==============================================
+
+  // ...inside component JSX where debug button is:
+  <Button
+    title="Debug: Fire in 10s"
+    onPress={async () => {
+      try {
+        const id = await scheduleDebugInSeconds(10);
+        Alert.alert('Debug scheduled', `id: ${id}`);
+      } catch (e) {
+        Alert.alert('Debug failed', String(e));
+      }
+    }}
+  />;
 
   return (
     <View style={{ padding: 18 }}>
