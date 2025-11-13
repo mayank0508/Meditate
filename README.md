@@ -14,10 +14,6 @@ Features a clean interface, streak tracking, and optional daily reminders.
 - Works on Android & iOS via Expo  
 
 ---
-
-## Screens (placeholder)
-_Add your screenshots here later._
-
 ---
 
 ## Getting Started
